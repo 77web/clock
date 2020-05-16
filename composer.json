@@ -1,6 +1,6 @@
 {
     "name": "nanaweb/clock",
-    "description": "",
+    "description": "Clock object for object-oriented programming",
     "license": "MIT",
     "authors": [
         {
@@ -22,35 +22,5 @@
         "psr-4": {
             "Nanaweb\\Clock\\": "src/"
         }
-    },
-    "autoload-dev": {
-        "psr-4": {
-            "Nanaweb\\Clock\\": [
-                "tests/",
-                "tests/Fake"
-            ]
-        }
-    },
-    "scripts": {
-        "test": [
-            "vendor/bin/phpunit"
-        ],
-        "tests": [
-            "@cs",
-            "vendor/bin/phpmd src,tests text ./phpmd.xml",
-            "vendor/bin/phpstan analyse -l max src tests -c phpstan.neon --no-progress",
-            "@test"
-        ],
-        "coverage": [
-            "php -dzend_extension=xdebug.so ./vendor/bin/phpunit --coverage-text --coverage-html=build/coverage"
-        ],
-        "cs": [
-            "vendor/bin/php-cs-fixer fix -v --dry-run",
-            "vendor/bin/phpcs --standard=phpcs.xml src;"
-        ],
-        "cs-fix": [
-            "vendor/bin/php-cs-fixer fix -v",
-            "vendor/bin/phpcbf src tests"
-        ]
     }
 }
