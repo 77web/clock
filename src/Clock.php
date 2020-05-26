@@ -25,6 +25,6 @@ class Clock
 
     public function now()
     {
-        return new \DateTimeImmutable('', new \DateTimeZone('Asia/Tokyo'));
+        return new \DateTimeImmutable('', new \DateTimeZone($this->timezone));
     }
 }
